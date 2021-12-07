@@ -17,8 +17,8 @@ class Element {
 
     removeChild(child) {
         if(child instanceof Element) {
-            for(let index = 0; index <= this.children.length; index++) {
-                if(Object.is(this.children.indexOf(child), index)) {
+            for(const element of this.children) {
+                if(Object.is(element, child)) {
                     this.children = this.children.filter(elem => elem != child)
                 }
             }
