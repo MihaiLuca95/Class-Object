@@ -17,11 +17,11 @@ class Element {
 
     removeChild(child) {
         if(child instanceof Element) {
-            this.children.forEach( element => {
-                if(Object.is(element, child)) { 
-                      this.children.splice(child,1)   
-                }
-            })
+            for(let index = 0; index <= this.children.length; index++) {
+               if(Object.is(index, this.children.indexOf(child))) { 
+                  this.children.splice(index,1)
+               }
+           }
         }
         return child
     }
